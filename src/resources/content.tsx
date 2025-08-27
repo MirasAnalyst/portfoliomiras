@@ -160,6 +160,26 @@ const about: About = {
         ],
         images: [],
       },
+      {
+        company: "Makini",
+        timeframe: "2021 - 2022",
+        role: "Quality Assurance Engineer",
+        achievements: [
+          <>
+            Developed and maintained structured test data repositories, ensuring efficient data validation, retrieval, and
+            management using SQL for automated testing in software quality assurance.
+          </>,
+          <>
+            Extracted, processed, and validated test data from multiple sources, integrating it into test automation frameworks
+            using Power BI, Pivot Tables in Microsoft Excel, and Python (pandas, NumPy) for data-driven testing and reporting.
+          </>,
+          <>
+            Automated data extraction and validation processes using Python scripts, improving test efficiency and ensuring data
+            accuracy for Computer-Based Maintenance Systems (CBMS).
+          </>,
+        ],
+        images: [],
+      },
     ],
   },
   studies: {
@@ -167,12 +187,16 @@ const about: About = {
     title: "Studies",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
+        name: "University of the Potomac",
+        description: <>Master’s degree in Data Science</>,
       },
       {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        name: "Budapest University of Technology and Economics",
+        description: <>Master’s degree in Chemical Engineering</>,
+      },
+      {
+        name: "Kazakh British Technical University",
+        description: <>Marine engineering</>,
       },
     ],
   },
