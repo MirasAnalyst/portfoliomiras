@@ -2,14 +2,15 @@ import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/
 import { Line, Logo, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
-  firstName: "Selene",
-  lastName: "Yu",
-  name: `Selene Yu`,
-  role: "Design Engineer",
+  firstName: "Miras",
+  lastName: "Muratov",
+  name: `Miras Muratov`,
+  role: "Data Scientist",
   avatar: "/images/avatar.jpg",
-  email: "example@gmail.com",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  email: "mirasmuratov1998@gmail.com",
+  location: "America/New_York", // IANA time zone identifier for Washington DC, USA
+  displayLocation: "Washington DC, USA", // Display location for UI
+  languages: ["English", "Kazakh", "Russian", "Turkish"], // Languages will wrap automatically to next line
 };
 
 const newsletter: Newsletter = {
@@ -24,17 +25,12 @@ const social: Social = [
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/once-ui-system",
+    link: "https://github.com/MirasAnalyst",
   },
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
-  },
-  {
-    name: "Threads",
-    icon: "threads",
-    link: "https://www.threads.com/@once_ui",
+    link: "https://www.linkedin.com/in/miras-muratov-7535741b3/",
   },
   {
     name: "Email",
@@ -78,10 +74,10 @@ const home: Home = {
 };
 
 const about: About = {
-  path: "/about",
+  path: "/",
   label: "About",
-  title: `About – ${person.name}`,
-  description: `Meet ${person.name}, ${person.role} from ${person.location}`,
+  title: `${person.name}'s Portfolio`,
+  description: `Meet ${person.name}, ${person.role} from Washington DC`,
   tableOfContent: {
     display: true,
     subItems: false,
@@ -98,9 +94,10 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        I’m a Fairfax, Virginia–based data scientist and engineer who builds AI-powered analytics and evaluation systems. 
+        With a background in data analytics at Chevron and a master’s in data analytics, 
+        I’ve worked on projects at Riff and CallCompass developing LLM evaluation frameworks, designing mega-prompting experiments, 
+        and building automated inconsistency-detection workflows on real user data. I believe in rigorous experimentation, rapid iteration, and using data science to make products more efficient, fair, and reliable
       </>
     ),
   },
@@ -109,17 +106,22 @@ const about: About = {
     title: "Work Experience",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "Tidewater Research",
+        timeframe: "2025 - Present",
+        role: "Data Scientist",
+        link: "https://www.tidewaterresearch.com",
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
+            Designed and executed LLM evaluation experiments for <a href="https://www.riffinsights.com" target="_blank" rel="noopener noreferrer" style={{ color: '#3B82F6', textDecoration: 'underline' }}>Riff</a> using Python and JavaScript, demonstrating that 6–7 extraction tasks can be combined in a single mega-prompt instead of multiple individual calls, achieving 57% cost savings while maintaining the same 8/10 quality score.
           </>,
           <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
+            Compared GPT-4o vs. GPT-5 in <a href="https://www.callcompass.io" target="_blank" rel="noopener noreferrer" style={{ color: '#3B82F6', textDecoration: 'underline' }}>CallCompass</a> for classification and evaluation with real sample data, identifying that GPT-4o delivered 10% higher accuracy with results ~25% cheaper, making it the more cost-efficient and reliable choice for production use.
+          </>,
+          <>
+            Built automated inconsistency-detection workflows, surfacing patterns in rubric misapplication and enabling data-driven improvements to QA evaluation criteria, with a 3% inconsistency rate across real user data in <a href="https://www.callcompass.io" target="_blank" rel="noopener noreferrer" style={{ color: '#3B82F6', textDecoration: 'underline' }}>CallCompass</a>.
+          </>,
+          <>
+            Delivered pattern analysis, improvement areas, and actionable recommendations that informed model selection, cost optimization, and call evaluation reliability for production use.
           </>,
         ],
         images: [
@@ -133,17 +135,27 @@ const about: About = {
         ],
       },
       {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
+        company: "Chevron",
+        timeframe: "2022 - 2025",
+        role: "Data Analyst",
         achievements: [
           <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
+            As a Product Owner, I defined technical requirements and successfully led the launch of web-based Flare and Fuel Gas
+            dashboards (cost ~1.2M USD) for an oil plant producing ~298,000 barrels of oil and ~13 million m³ of sales gas daily—ensuring
+            user-centric UI/UX design, seamless cross-team collaboration, and alignment with operational and compliance goals.
           </>,
           <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
+            Conducted over 15 User Acceptance Tests (UAT), identifying and resolving 50+ bugs. Collaborated with software developers and
+            UX designers to enhance user workflows, optimize interface responsiveness, and ensure seamless user interaction.
+          </>,
+          <>
+            Contributed to the creation of a Digital Twin for an oil plant by integrating live process data into Aspen HYSYS and
+            developing Python-based UI modules for interactive parameter tracking and simulation feedback.
+          </>,
+          <>
+            Conducted audits and streamlined Excel-based daily gas balances, monthly composition reports, and quarterly greenhouse gas
+            emission reports—reducing processing time by 30% using Macros, Python automation, and SQL. Helped reformat templates to
+            improve UX for engineering and compliance teams.
           </>,
         ],
         images: [],
@@ -228,73 +240,4 @@ const about: About = {
   },
 };
 
-const blog: Blog = {
-  path: "/blog",
-  label: "Blog",
-  title: "Writing about design and tech...",
-  description: `Read what ${person.name} has been up to recently`,
-  // Create new blog posts by adding a new .mdx file to app/blog/posts
-  // All posts will be listed on the /blog route
-};
-
-const work: Work = {
-  path: "/work",
-  label: "Work",
-  title: `Projects – ${person.name}`,
-  description: `Design and dev projects by ${person.name}`,
-  // Create new project pages by adding a new .mdx file to app/blog/posts
-  // All projects will be listed on the /home and /work routes
-};
-
-const gallery: Gallery = {
-  path: "/gallery",
-  label: "Gallery",
-  title: `Photo gallery – ${person.name}`,
-  description: `A photo collection by ${person.name}`,
-  // Images by https://lorant.one
-  // These are placeholder images, replace with your own
-  images: [
-    {
-      src: "/images/gallery/horizontal-1.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-4.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/horizontal-3.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-1.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/vertical-2.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/horizontal-2.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/horizontal-4.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-3.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-  ],
-};
-
-export { person, social, newsletter, home, about, blog, work, gallery };
+export { person, social, newsletter, home, about };

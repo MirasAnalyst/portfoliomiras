@@ -25,6 +25,8 @@ export type Person = {
   email: string;
   /** IANA time zone location */
   location: IANATimeZone;
+  /** Display location for UI (e.g., "Washington DC") */
+  displayLocation?: string;
   /** Languages spoken */
   languages?: string[];
 };
@@ -148,6 +150,8 @@ export interface About extends BasePageConfig {
       timeframe: string;
       /** Role or job title */
       role: string;
+      /** Company website link */
+      link?: string;
       /** Achievements at the company */
       achievements: React.ReactNode[];
       /** Images related to the experience */
