@@ -7,7 +7,7 @@ interface EmailButtonProps {
   name: string;
   icon: string;
   size?: "s" | "m" | "l";
-  variant?: "secondary" | "ghost";
+  variant?: "secondary" | "tertiary";
   showLabel?: boolean;
 }
 

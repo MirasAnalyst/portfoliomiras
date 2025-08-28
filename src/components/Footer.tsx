@@ -36,7 +36,7 @@ export const Footer = () => {
                     name={item.name}
                     icon={item.icon}
                     size="s"
-                    variant="ghost"
+                    variant="tertiary"
                   />
                 ) : (
                   <IconButton
@@ -45,7 +45,7 @@ export const Footer = () => {
                     icon={item.icon}
                     tooltip={item.name}
                     size="s"
-                    variant="ghost"
+                    variant="tertiary"
                   />
                 )
               ),
