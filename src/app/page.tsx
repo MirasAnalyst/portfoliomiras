@@ -14,6 +14,7 @@ import {
 } from "@once-ui-system/core";
 import { baseURL, about, person, social } from "@/resources";
 import TableOfContents from "@/components/about/TableOfContents";
+import { EmailButton } from "@/components";
 import styles from "@/components/about/about.module.scss";
 import React from "react";
 
@@ -167,24 +168,44 @@ export default function Home() {
                     item.link && (
                       <React.Fragment key={item.name}>
                         <Row s={{ hide: true }}>
-                          <Button
-                            key={item.name}
-                            href={item.link}
-                            prefixIcon={item.icon}
-                            label={item.name}
-                            size="s"
-                            weight="default"
-                            variant="secondary"
-                          />
+                          {item.name === "Email" ? (
+                            <EmailButton
+                              key={item.name}
+                              name={item.name}
+                              icon={item.icon}
+                              variant="secondary"
+                              showLabel={true}
+                            />
+                          ) : (
+                            <Button
+                              key={item.name}
+                              href={item.link}
+                              prefixIcon={item.icon}
+                              label={item.name}
+                              size="s"
+                              weight="default"
+                              variant="secondary"
+                            />
+                          )}
                         </Row>
                         <Row hide s={{ hide: false }}>
-                          <IconButton
-                            size="l"
-                            key={`${item.name}-icon`}
-                            href={item.link}
-                            icon={item.icon}
-                            variant="secondary"
-                          />
+                          {item.name === "Email" ? (
+                            <EmailButton
+                              size="l"
+                              key={`${item.name}-icon`}
+                              name={item.name}
+                              icon={item.icon}
+                              variant="secondary"
+                            />
+                          ) : (
+                            <IconButton
+                              size="l"
+                              key={`${item.name}-icon`}
+                              href={item.link}
+                              icon={item.icon}
+                              variant="secondary"
+                            />
+                          )}
                         </Row>
                       </React.Fragment>
                     ),

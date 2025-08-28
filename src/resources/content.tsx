@@ -35,7 +35,7 @@ const social: Social = [
   {
     name: "Email",
     icon: "email",
-    link: `mailto:${person.email}`,
+    link: "javascript:void(0);",
   },
 ];
 
@@ -87,7 +87,7 @@ const about: About = {
   },
   calendar: {
     display: true,
-    link: "https://cal.com",
+    link: "https://calendar.app.google/tq5Gh9JMUUL8fW719",
   },
   intro: {
     display: true,
@@ -138,6 +138,7 @@ const about: About = {
         company: "Chevron",
         timeframe: "2022 - 2025",
         role: "Data Analyst",
+        link: "https://www.chevron.com",
         achievements: [
           <>
             As a Product Owner, I defined technical requirements and successfully led the launch of web-based Flare and Fuel Gas
@@ -164,6 +165,7 @@ const about: About = {
         company: "Makini",
         timeframe: "2021 - 2022",
         role: "Quality Assurance Engineer",
+        link: "https://www.makini.io",
         achievements: [
           <>
             Developed and maintained structured test data repositories, ensuring efficient data validation, retrieval, and
