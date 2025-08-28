@@ -207,7 +207,7 @@ const about: About = {
     title: "Technical skills",
     skills: [
       {
-        title: "Figma",
+        title: "Figmaa",
         description: (
           <>Able to prototype in Figma with Once UI with unnatural speed.</>
         ),
