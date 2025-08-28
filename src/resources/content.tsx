@@ -9,7 +9,7 @@ const person: Person = {
   avatar: "/images/avatar.jpg",
   email: "mirasmuratov1998@gmail.com",
   location: "America/New_York", // IANA time zone identifier for Washington DC, USA
-  displayLocation: "Washington DC, USA", // Display location for UI
+  displayLocation: "Fairfax, VA, USA", // Display location for UI
   languages: ["English", "Kazakh", "Russian", "Turkish"], // Languages will wrap automatically to next line
 };
 
@@ -93,12 +93,12 @@ const about: About = {
     display: true,
     title: "Introduction",
     description: (
-      <>
+      <span>
         I’m a Fairfax, Virginia–based data scientist and engineer who builds AI-powered analytics and evaluation systems. 
-        With a background in data analytics at Chevron and a master’s in data analytics, 
-        I’ve worked on projects at Riff and CallCompass developing LLM evaluation frameworks, designing mega-prompting experiments, 
+        With a background in data analytics at <a href="https://www.chevron.com" target="_blank" rel="noopener noreferrer" style={{ color: '#3B82F6', textDecoration: 'underline' }}>Chevron</a> and a master’s in data analytics, 
+        I’ve worked on projects at <a href="https://www.riffinsights.com" target="_blank" rel="noopener noreferrer" style={{ color: '#3B82F6', textDecoration: 'underline' }}>Riff</a> and <a href="https://www.callcompass.io" target="_blank" rel="noopener noreferrer" style={{ color: '#3B82F6', textDecoration: 'underline' }}>CallCompass</a> developing LLM evaluation frameworks, designing mega-prompting experiments, 
         and building automated inconsistency-detection workflows on real user data. I believe in rigorous experimentation, rapid iteration, and using data science to make products more efficient, fair, and reliable
-      </>
+      </span>
     ),
   },
   work: {
@@ -123,15 +123,6 @@ const about: About = {
           <>
             Delivered pattern analysis, improvement areas, and actionable recommendations that informed model selection, cost optimization, and call evaluation reliability for production use.
           </>,
-        ],
-        images: [
-          // optional: leave the array empty if you don't want to display images
-          {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
-            width: 16,
-            height: 9,
-          },
         ],
       },
       {
@@ -207,36 +198,50 @@ const about: About = {
     title: "Technical skills",
     skills: [
       {
-        title: "Figmaa",
+        title: "Machine Learning & AI",
         description: (
-          <>Able to prototype in Figma with Once UI with unnatural speed.</>
+          <>Prompt engineering & LLM evaluation (mega-prompting, cost-quality tradeoffs)<br/>
+          LangChain / AI SDK (structured outputs, Zod schemas, analysis pipelines)<br/>
+          Model evaluation (confusion matrix, precision/recall, variance analysis, statistical significance)<br/>
+          Supervised & Unsupervised ML (classification, regression, clustering)<br/>
+          </>
+
         ),
         tags: [
-          {
-            name: "Figma",
-            icon: "figma",
-          },
+          { name: "Prompt Engineering", icon: "⚡" },
+          { name: "LangChain", icon: "🔗" },
+          { name: "Model Evaluation", icon: "📊" },
+          { name: "Machine Learning", icon: "🤖" },
         ],
         // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
       },
+      {
+        title: "Data Engineering & Databases",
+        description: (
+          <>Supabase / PostgreSQL (schema design, hosting, API connections)<br/>
+          ETL workflows (extraction, cleaning, loading from APIs & web scraping)<br/>
+          Data scraping & labeling (e.g., Reddit, Amazon, Airbnb datasets)<br/>
+          JSON / CSV / Excel / SQL pipelines for structured outputs<br/>
+          </>
+
+        ),
+        tags: [
+          { name: "Supabase", icon: "🟢" },
+          { name: "PostgreSQL", icon: "🐘" },
+          { name: "ETL", icon: "⚙️" },
+          { name: "Web Scraping", icon: "🌐" },
+          { name: "Data Labeling", icon: "🏷️" },
+          { name: "JSON", icon: "📄" },
+          { name: "CSV", icon: "📊" },
+          { name: "Excel", icon: "📑" },
+          { name: "SQL", icon: "💾" },
+        ],
+        // optional: leave the array empty if you don't want to display images
+      },      
       {
         title: "Next.js",
         description: (
-          <>Building next gen apps with Next.js + Once UI + Supabase.</>
+          <>Building next gen apps with Next.js + Supabase.</>
         ),
         tags: [
           {
