@@ -14,7 +14,7 @@ import {
   SpacingToken,
 } from "@once-ui-system/core";
 import { Footer, Header, RouteGuard, Providers } from "@/components";
-import { baseURL, effects, fonts, style, dataStyle, home, person } from "@/resources";
+import { baseURL, effects, fonts, style, dataStyle, home, person, social } from "@/resources";
 
 export async function generateMetadata() {
   return {
@@ -83,8 +83,14 @@ export async function generateMetadata() {
       card: 'summary_large_image',
       title: home.title,
       description: home.description,
-      creator: '@mirasmuratov', // Add your Twitter handle if you have one
-      images: [`${baseURL}${home.image}`],
+      creator: '@mirasmuratov',
+      site: '@mirasmuratov',
+      images: [{
+        url: `${baseURL}${home.image}`,
+        width: 1200,
+        height: 630,
+        alt: `${person.name} - ${person.role} Portfolio`
+      }],
     },
     verification: {
       // Add your verification codes here when you have them
@@ -154,7 +160,8 @@ export default async function RootLayout({
               "knows": ["Machine Learning", "Data Science", "AI", "Python", "LLM Evaluation"],
               "sameAs": [
                 person.email ? `mailto:${person.email}` : null,
-                // Add your social media URLs here when available
+                ...social.filter(item => item.link && !item.link.includes('javascript:')).map(item => item.link),
+                baseURL
               ].filter(Boolean)
             })
           }}
@@ -202,6 +209,67 @@ export default async function RootLayout({
                 "url": baseURL,
                 "image": `${baseURL}${person.avatar}`
               }
+            })
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "@id": `${baseURL}#organization`,
+              "name": "Tidewater Research",
+              "url": "https://www.tidewaterresearch.com",
+              "employee": {
+                "@type": "Person",
+                "name": person.name,
+                "jobTitle": person.role,
+                "worksFor": {
+                  "@type": "Organization",
+                  "name": "Tidewater Research"
+                }
+              },
+              "foundingLocation": {
+                "@type": "Place",
+                "address": {
+                  "@type": "PostalAddress",
+                  "addressLocality": "Richmond",
+                  "addressRegion": "VA",
+                  "addressCountry": "US"
+                }
+              },
+              "industry": "Artificial Intelligence",
+              "description": "AI-powered tools that solve real problems for real businesses"
+            })
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": baseURL
+                },
+                {
+                  "@type": "ListItem", 
+                  "position": 2,
+                  "name": "Portfolio",
+                  "item": `${baseURL}#portfolio`
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 3,
+                  "name": "About",
+                  "item": `${baseURL}#about`
+                }
+              ]
             })
           }}
         />
