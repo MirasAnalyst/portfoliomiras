@@ -14,16 +14,85 @@ import {
   SpacingToken,
 } from "@once-ui-system/core";
 import { Footer, Header, RouteGuard, Providers } from "@/components";
-import { baseURL, effects, fonts, style, dataStyle, home } from "@/resources";
+import { baseURL, effects, fonts, style, dataStyle, home, person } from "@/resources";
 
 export async function generateMetadata() {
-  return Meta.generate({
-    title: home.title,
+  return {
+    title: {
+      default: home.title,
+      template: `%s | ${person.name}`,
+    },
     description: home.description,
-    baseURL: baseURL,
-    path: home.path,
-    image: home.image,
-  });
+    keywords: [
+      'Data Scientist',
+      'AI Engineer', 
+      'Machine Learning',
+      'LLM Evaluation',
+      'Python',
+      'Data Analytics',
+      'Miras Muratov',
+      'Portfolio',
+      'Washington DC',
+      'Riff',
+      'CallCompass',
+      'Tidewater Research'
+    ],
+    authors: [{ name: person.name, url: baseURL }],
+    creator: person.name,
+    publisher: person.name,
+    metadataBase: new URL(baseURL),
+    alternates: {
+      canonical: baseURL,
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
+      },
+    },
+    openGraph: {
+      type: 'website',
+      locale: 'en_US',
+      url: baseURL,
+      title: home.title,
+      description: home.description,
+      siteName: home.title,
+      images: [
+        {
+          url: `${baseURL}${home.image}`,
+          width: 1200,
+          height: 630,
+          alt: `${person.name} - ${person.role}`,
+          type: 'image/jpeg',
+        },
+        {
+          url: `${baseURL}${person.avatar}`,
+          width: 400,
+          height: 400,
+          alt: `${person.name} Profile Picture`,
+          type: 'image/jpeg',
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: home.title,
+      description: home.description,
+      creator: '@mirasmuratov', // Add your Twitter handle if you have one
+      images: [`${baseURL}${home.image}`],
+    },
+    verification: {
+      // Add your verification codes here when you have them
+      // google: 'your-google-verification-code',
+      // yandex: 'your-yandex-verification-code',
+      // bing: 'your-bing-verification-code',
+    },
+  };
 }
 
 export default async function RootLayout({
@@ -46,6 +115,96 @@ export default async function RootLayout({
     >
       <head>
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              "name": person.name,
+              "alternateName": `${person.firstName} ${person.lastName}`,
+              "description": `${person.role} specializing in AI-powered analytics and evaluation systems`,
+              "jobTitle": person.role,
+              "url": baseURL,
+              "image": `${baseURL}${person.avatar}`,
+              "email": `mailto:${person.email}`,
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Washington",
+                "addressRegion": "DC",
+                "addressCountry": "US"
+              },
+              "alumniOf": [
+                {
+                  "@type": "EducationalOrganization",
+                  "name": "University of the Potomac",
+                  "department": "Data Science"
+                },
+                {
+                  "@type": "EducationalOrganization", 
+                  "name": "Budapest University of Technology and Economics",
+                  "department": "Chemical Engineering"
+                }
+              ],
+              "worksFor": {
+                "@type": "Organization",
+                "name": "Tidewater Research",
+                "url": "https://www.tidewaterresearch.com"
+              },
+              "knows": ["Machine Learning", "Data Science", "AI", "Python", "LLM Evaluation"],
+              "sameAs": [
+                person.email ? `mailto:${person.email}` : null,
+                // Add your social media URLs here when available
+              ].filter(Boolean)
+            })
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              "name": home.title,
+              "description": home.description,
+              "url": baseURL,
+              "author": {
+                "@type": "Person",
+                "name": person.name,
+                "jobTitle": person.role
+              },
+              "publisher": {
+                "@type": "Person", 
+                "name": person.name
+              },
+              "inLanguage": "en-US",
+              "copyrightYear": new Date().getFullYear(),
+              "copyrightHolder": {
+                "@type": "Person",
+                "name": person.name
+              }
+            })
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "ProfilePage",
+              "dateCreated": "2025-01-01T00:00:00.000Z",
+              "dateModified": new Date().toISOString(),
+              "mainEntity": {
+                "@type": "Person",
+                "name": person.name,
+                "jobTitle": person.role,
+                "description": `Portfolio of ${person.name}, ${person.role}`,
+                "url": baseURL,
+                "image": `${baseURL}${person.avatar}`
+              }
+            })
+          }}
+        />
         <script
           id="theme-init"
           dangerouslySetInnerHTML={{
