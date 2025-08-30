@@ -94,10 +94,10 @@ const about: About = {
     title: "Introduction",
     description: (
       <span>
-        I’m a Fairfax, Virginia–based data scientist and engineer who builds AI-powered analytics and evaluation systems. 
-        With a background in data analytics at <a href="https://www.chevron.com" target="_blank" rel="noopener noreferrer" style={{ color: '#3B82F6', textDecoration: 'underline' }}>Chevron</a> and a master’s in data analytics, 
-        I’ve worked on projects at <a href="https://www.riffinsights.com" target="_blank" rel="noopener noreferrer" style={{ color: '#3B82F6', textDecoration: 'underline' }}>Riff</a> and <a href="https://www.callcompass.io" target="_blank" rel="noopener noreferrer" style={{ color: '#3B82F6', textDecoration: 'underline' }}>CallCompass</a> developing LLM evaluation frameworks, designing mega-prompting experiments, 
-        and building automated inconsistency-detection workflows on real user data. I believe in rigorous experimentation, rapid iteration, and using data science to make products more efficient, fair, and reliable
+        I'm a Washington DC area data scientist and AI engineer specializing in machine learning, LLM evaluation, and AI-powered analytics systems. 
+        With extensive experience in data science at Fortune 500 companies like <a href="https://www.chevron.com" target="_blank" rel="noopener noreferrer" style={{ color: '#3B82F6', textDecoration: 'underline' }}>Chevron</a> and a Master's degree in Data Science from University of the Potomac, 
+        I've led breakthrough AI projects at <a href="https://www.riffinsights.com" target="_blank" rel="noopener noreferrer" style={{ color: '#3B82F6', textDecoration: 'underline' }}>Riff</a> and <a href="https://www.callcompass.io" target="_blank" rel="noopener noreferrer" style={{ color: '#3B82F6', textDecoration: 'underline' }}>CallCompass</a>, developing cutting-edge LLM evaluation frameworks, designing cost-efficient mega-prompting experiments, 
+        and building automated AI quality assurance workflows. I specialize in Python, machine learning, data visualization, and transforming complex data challenges into scalable, reliable AI solutions for businesses in Northern Virginia and Washington DC
       </span>
     ),
   },
