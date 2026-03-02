@@ -96,7 +96,7 @@ export default function About() {
             <Avatar src={person.avatar} size="xl" />
             <Row gap="8" vertical="center">
               <Icon onBackground="accent-weak" name="globe" />
-              {person.location}
+              Washington, D.C, USA
             </Row>
             {person.languages && person.languages.length > 0 && (
               <Row wrap gap="8">
@@ -212,7 +212,13 @@ export default function About() {
                   <Column key={`${experience.company}-${experience.role}-${index}`} fillWidth>
                     <Row fillWidth horizontal="between" vertical="end" marginBottom="4">
                       <Text id={experience.company} variant="heading-strong-l">
-                        {experience.company}
+                        {experience.companyLink ? (
+                          <a href={experience.companyLink} target="_blank" rel="noopener noreferrer" style={{ color: "inherit", textDecoration: "underline" }}>
+                            {experience.company}
+                          </a>
+                        ) : (
+                          experience.company
+                        )}
                       </Text>
                       <Text variant="heading-default-xs" onBackground="neutral-weak">
                         {experience.timeframe}

@@ -2,48 +2,33 @@ import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/
 import { Line, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
-  firstName: "Selene",
-  lastName: "Yu",
-  name: `Selene Yu`,
-  role: "Design Engineer",
-  avatar: "/images/avatar.jpg",
-  email: "example@gmail.com",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  firstName: "Miras",
+  lastName: "Muratov",
+  name: `Miras Muratov`,
+  role: "Data Scientist & AI Engineer",
+  avatar: "/images/avatar.png",
+  email: "mirasmuratov1998@gmail.com",
+  location: "America/New_York", // Fairfax, Virginia
+  languages: ["English", "Kazakh", "Russian"],
 };
 
 const newsletter: Newsletter = {
-  display: true,
+  display: false,
   title: <>Subscribe to {person.firstName}'s Newsletter</>,
-  description: <>My weekly newsletter about creativity and engineering</>,
+  description: <>My newsletter about data science and AI engineering</>,
 };
 
 const social: Social = [
-  // Links are automatically displayed.
-  // Import new icons in /once-ui/icons.ts
-  // Set essentials: true for links you want to show on the about page
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/once-ui-system",
+    link: "https://github.com/mirasanalyst",
     essential: true,
   },
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
-    essential: true,
-  },
-  {
-    name: "Instagram",
-    icon: "instagram",
-    link: "https://www.instagram.com/once_ui/",
-    essential: false,
-  },
-  {
-    name: "Threads",
-    icon: "threads",
-    link: "https://www.threads.com/@once_ui",
+    link: "https://www.linkedin.com/in/miras-muratov-7535741b3/",
     essential: true,
   },
   {
@@ -60,29 +45,29 @@ const home: Home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
+  headline: <>Data Scientist & AI Engineer</>,
   featured: {
-    display: true,
+    display: false,
     title: (
       <Row gap="12" vertical="center">
-        <strong className="ml-4">Once UI</strong>{" "}
+        <strong className="ml-4">ScaleApp</strong>{" "}
         <Line background="brand-alpha-strong" vert height="20" />
         <Text marginRight="4" onBackground="brand-medium">
           Featured work
         </Text>
       </Row>
     ),
-    href: "/work/building-once-ui-a-customizable-design-system",
+    href: "/work",
   },
   subline: (
     <>
-    I'm Selene, a design engineer at <Text as="span" size="xl" weight="strong">ONCE UI</Text>, where I craft intuitive <br /> user experiences. After hours, I build my own projects.
+    I'm Miras, a <Text as="span" size="xl" weight="strong">Data Scientist & AI Engineer</Text> based in Fairfax, Virginia. I build scalable data pipelines, <br /> ML-driven analytics, and cloud-native solutions that deliver measurable business value.
 </>
   ),
 };
 
 const about: About = {
-  path: "/about",
+  path: "/",
   label: "About",
   title: `About – ${person.name}`,
   description: `Meet ${person.name}, ${person.role} from ${person.location}`,
@@ -94,7 +79,7 @@ const about: About = {
     display: true,
   },
   calendar: {
-    display: true,
+    display: false,
     link: "https://cal.com",
   },
   intro: {
@@ -102,52 +87,126 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        Data Scientist and AI Engineer with strong experience in data analytics, reporting,
+        operational support, and cross-functional coordination within large-scale energy and technology
+        environments. Proven ability to manage budgets, build executive-level dashboards, support
+        structured project processes, and translate complex data into clear visual narratives for
+        leadership decision-making. Delivered $1.2M+ in measurable operational value through
+        data-driven reporting and performance optimization.
       </>
     ),
   },
   work: {
-    display: true, // set to false to hide this section
+    display: true,
     title: "Work Experience",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "ScaleApp",
+        companyLink: "https://uscaleapp.com/",
+        timeframe: "September 2025 – Present",
+        role: "Founder & Full Stack Data / AI Engineer",
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
+            Designed and deployed cloud-native ETL/ELT pipelines using Python and SQL to ingest,
+            transform, and validate structured and semi-structured data for ML-driven engineering
+            analytics.
           </>,
           <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
+            Built scalable backend systems leveraging Google Cloud (BigQuery, Cloud Storage) for data
+            warehousing and analytics use cases.
+          </>,
+          <>
+            Implemented modular, maintainable Python code following OOP principles, logging, and
+            structured error handling to ensure pipeline reliability.
+          </>,
+          <>
+            Developed data models and optimized complex SQL queries using partitioning and clustering
+            techniques to improve query performance and reduce compute cost.
+          </>,
+          <>
+            Designed automated workflows (Airflow-style orchestration) with retry logic, dependency
+            management, and monitoring to meet defined SLAs and freshness requirements.
+          </>,
+          <>
+            Integrated CI/CD pipelines (Git-based version control, automated deployments) to maintain
+            reproducible data infrastructure.
+          </>,
+          <>
+            Containerized services using Docker to support scalable deployment and environment
+            consistency.
+          </>,
+          <>
+            Delivered 30–40% workflow efficiency improvements through optimized data architecture and
+            performance tuning.
           </>,
         ],
-        images: [
-          // optional: leave the array empty if you don't want to display images
-          {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
-            width: 16,
-            height: 9,
-          },
-        ],
+        images: [],
       },
       {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
+        company: "Monument Labs",
+        companyLink: "https://www.monumentlabs.io/",
+        timeframe: "May 2025 – September 2025",
+        role: "Data Scientist / AI Engineer Intern",
         achievements: [
           <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
+            Built and optimized ETL pipelines in Python for large-scale dataset ingestion, validation,
+            and transformation supporting analytics and ML workflows.
           </>,
           <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
+            Developed advanced SQL queries for data aggregation, modeling, and performance
+            benchmarking.
+          </>,
+          <>
+            Conducted query tuning and optimization to reduce compute cost by 57% while maintaining
+            consistent system performance.
+          </>,
+          <>
+            Designed data validation frameworks to ensure data quality, reliability, and schema
+            consistency across systems.
+          </>,
+          <>
+            Implemented monitoring and automated failure detection workflows to meet reliability and
+            availability targets.
+          </>,
+          <>
+            Collaborated with analysts and product teams to translate business requirements into
+            scalable data solutions.
+          </>,
+        ],
+        images: [],
+      },
+      {
+        company: "Chevron",
+        timeframe: "September 2022 – January 2025",
+        role: "Process Engineer",
+        achievements: [
+          <>
+            Designed and maintained large-scale operational data systems supporting facilities
+            producing ~298,000 barrels/day and ~13 MM m³/day gas throughput.
+          </>,
+          <>
+            Built real-time performance dashboards and reporting pipelines generating $1.2M+ annual
+            value through KPI tracking and energy optimization.
+          </>,
+          <>
+            Performed large-scale data ingestion and transformation from industrial source systems
+            (relational databases including MySQL/Oracle-style systems).
+          </>,
+          <>
+            Implemented structured data governance practices including access control, data validation,
+            and standardized schema documentation.
+          </>,
+          <>
+            Optimized complex queries and performance reporting pipelines to improve latency and
+            reporting reliability.
+          </>,
+          <>
+            Developed digital twin models (Aspen HYSYS) integrated with operational datasets to
+            improve predictive analytics and troubleshooting cycles.
+          </>,
+          <>
+            Reduced emissions by ~40 tCO₂e/year using data-driven performance monitoring and energy
+            efficiency analytics.
           </>,
         ],
         images: [],
@@ -155,78 +214,100 @@ const about: About = {
     ],
   },
   studies: {
-    display: true, // set to false to hide this section
+    display: true,
     title: "Studies",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
+        name: "University of the Potomac – Washington, D.C.",
+        description: (
+          <>Master of Science in Data Analytics (Minor: Big Data Science) — January 2025 – January 2027</>
+        ),
       },
       {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        name: "Budapest University of Technology and Economics",
+        description: (
+          <>Master of Science in Chemical Engineering — July 2022</>
+        ),
+      },
+      {
+        name: "Kazakh British Technical University",
+        description: (
+          <>Bachelor of Science in Mechanical Marine Engineering — July 2020</>
+        ),
       },
     ],
   },
   technical: {
-    display: true, // set to false to hide this section
+    display: true,
     title: "Technical skills",
     skills: [
       {
-        title: "Figma",
+        title: "Programming",
         description: (
-          <>Able to prototype in Figma with Once UI with unnatural speed.</>
+          <>Python (OOP, modular design, logging, error handling), SQL (advanced), JavaScript</>
         ),
         tags: [
-          {
-            name: "Figma",
-            icon: "figma",
-          },
+          { name: "Python", icon: "python" },
+          { name: "JavaScript", icon: "javascript" },
         ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
+        images: [],
       },
       {
-        title: "Next.js",
+        title: "Cloud & Data Platforms",
         description: (
-          <>Building next gen apps with Next.js + Once UI + Supabase.</>
+          <>Google Cloud Platform (BigQuery, Cloud Storage, Dataform), CI/CD pipelines</>
         ),
         tags: [
-          {
-            name: "JavaScript",
-            icon: "javascript",
-          },
-          {
-            name: "Next.js",
-            icon: "nextjs",
-          },
-          {
-            name: "Supabase",
-            icon: "supabase",
-          },
+          { name: "Google Cloud", icon: "googlecloud" },
         ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
+        images: [],
+      },
+      {
+        title: "Orchestration & Infrastructure",
+        description: (
+          <>Apache Airflow (DAG design, retries, sensors, monitoring), Docker, Git, containerized workflows</>
+        ),
+        tags: [
+          { name: "Airflow", icon: "airflow" },
+          { name: "Docker", icon: "docker" },
+          { name: "Git", icon: "git" },
         ],
+        images: [],
+      },
+      {
+        title: "Data Engineering",
+        description: (
+          <>ETL/ELT, batch & streaming pipelines, data modeling, warehousing, partitioning, clustering</>
+        ),
+        tags: [],
+        images: [],
+      },
+      {
+        title: "Databases",
+        description: (
+          <>MySQL, Oracle, BigQuery</>
+        ),
+        tags: [
+          { name: "MySQL", icon: "mysql" },
+          { name: "Oracle", icon: "oracle" },
+        ],
+        images: [],
+      },
+      {
+        title: "Monitoring & Governance",
+        description: (
+          <>SLA management, schema management, data validation, access control</>
+        ),
+        tags: [],
+        images: [],
+      },
+      {
+        title: "Analytics",
+        description: (
+          <>KPI dashboards, performance tuning, query optimization</>
+        ),
+        tags: [],
+        images: [],
       },
     ],
   },
@@ -235,19 +316,15 @@ const about: About = {
 const blog: Blog = {
   path: "/blog",
   label: "Blog",
-  title: "Writing about design and tech...",
+  title: "Writing about data and tech...",
   description: `Read what ${person.name} has been up to recently`,
-  // Create new blog posts by adding a new .mdx file to app/blog/posts
-  // All posts will be listed on the /blog route
 };
 
 const work: Work = {
   path: "/work",
   label: "Work",
   title: `Projects – ${person.name}`,
-  description: `Design and dev projects by ${person.name}`,
-  // Create new project pages by adding a new .mdx file to app/blog/posts
-  // All projects will be listed on the /home and /work routes
+  description: `Data and AI projects by ${person.name}`,
 };
 
 const gallery: Gallery = {
@@ -255,8 +332,6 @@ const gallery: Gallery = {
   label: "Gallery",
   title: `Photo gallery – ${person.name}`,
   description: `A photo collection by ${person.name}`,
-  // Images by https://lorant.one
-  // These are placeholder images, replace with your own
   images: [
     {
       src: "/images/gallery/horizontal-1.jpg",
