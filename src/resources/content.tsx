@@ -5,7 +5,7 @@ const person: Person = {
   firstName: "Miras",
   lastName: "Muratov",
   name: `Miras Muratov`,
-  role: "Data Scientist & AI Engineer",
+  role: "Senior Product Analyst",
   avatar: "/images/avatar.png",
   email: "mirasmuratov1998@gmail.com",
   location: "America/New_York", // Fairfax, Virginia
@@ -45,7 +45,7 @@ const home: Home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Data Scientist & AI Engineer</>,
+  headline: <>Senior Product Analyst</>,
   featured: {
     display: false,
     title: (
@@ -61,7 +61,7 @@ const home: Home = {
   },
   subline: (
     <>
-    I'm Miras, a <Text as="span" size="xl" weight="strong">Data Scientist & AI Engineer</Text> based in Fairfax, Virginia. I build scalable data pipelines, <br /> ML-driven analytics, and cloud-native solutions that deliver measurable business value.
+    I'm Miras, a <Text as="span" size="xl" weight="strong">Data Scientist, AI Engineer & Product Analyst</Text> based in Fairfax, Virginia. I build scalable, cost-efficient AI solutions <br /> and drive data-informed product decisions through analytics, experimentation, and executive reporting.
 </>
   ),
 };
@@ -87,12 +87,13 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        Data Scientist and AI Engineer with strong experience in data analytics, reporting,
-        operational support, and cross-functional coordination within large-scale energy and technology
-        environments. Proven ability to manage budgets, build executive-level dashboards, support
-        structured project processes, and translate complex data into clear visual narratives for
-        leadership decision-making. Delivered $1.2M+ in measurable operational value through
-        data-driven reporting and performance optimization.
+        Washington DC area Data Scientist, AI Engineer, and founder of ScaleApp — an AI platform that
+        generates industrial process flowsheets from text prompts. Experienced in LLM evaluation, ML
+        systems, and Python, with prior work at Chevron and advanced analytics training through a
+        Master's in Data Science. I build scalable, cost-efficient AI solutions for complex engineering
+        and data challenges. I've led breakthrough AI projects at Riff and CallCompass, developing
+        cutting-edge LLM evaluation frameworks, designing cost-efficient mega-prompting experiments,
+        and building automated AI quality assurance workflows.
       </>
     ),
   },
@@ -107,37 +108,32 @@ const about: About = {
         role: "Founder & Full Stack Data / AI Engineer",
         achievements: [
           <>
-            Designed and deployed cloud-native ETL/ELT pipelines using Python and SQL to ingest,
-            transform, and validate structured and semi-structured data for ML-driven engineering
-            analytics.
+            Owned product analytics strategy for a SaaS AI platform, partnering with engineering and
+            stakeholders to drive data-informed product decisions.
           </>,
           <>
-            Built scalable backend systems leveraging Google Cloud (BigQuery, Cloud Storage) for data
-            warehousing and analytics use cases.
+            Defined and monitored core product KPIs (activation, engagement, retention, feature usage,
+            conversion funnels) across web platform.
           </>,
           <>
-            Implemented modular, maintainable Python code following OOP principles, logging, and
-            structured error handling to ensure pipeline reliability.
+            Designed and executed funnel analysis, cohort analysis, and pre-post release evaluations to
+            measure feature impact and user behavior changes.
           </>,
           <>
-            Developed data models and optimized complex SQL queries using partitioning and clustering
-            techniques to improve query performance and reduce compute cost.
+            Implemented event tracking architecture and ensured data consistency from frontend analytics
+            tools (GA-style tracking, event schemas) to BigQuery data warehouse.
           </>,
           <>
-            Designed automated workflows (Airflow-style orchestration) with retry logic, dependency
-            management, and monitoring to meet defined SLAs and freshness requirements.
+            Built executive dashboards in Looker-style environments to communicate performance metrics
+            in clear, one-slide visual summaries.
           </>,
           <>
-            Integrated CI/CD pipelines (Git-based version control, automated deployments) to maintain
-            reproducible data infrastructure.
+            Conducted A/B-style testing and performance benchmarking, driving 30–40% workflow
+            efficiency improvement.
           </>,
           <>
-            Containerized services using Docker to support scalable deployment and environment
-            consistency.
-          </>,
-          <>
-            Delivered 30–40% workflow efficiency improvements through optimized data architecture and
-            performance tuning.
+            Delivered 20+ stakeholder presentations translating analytics into actionable roadmap
+            decisions.
           </>,
         ],
         images: [],
@@ -146,31 +142,31 @@ const about: About = {
         company: "Monument Labs",
         companyLink: "https://www.monumentlabs.io/",
         timeframe: "May 2025 – September 2025",
-        role: "Data Scientist / AI Engineer Intern",
+        role: "Data Scientist",
         achievements: [
           <>
-            Built and optimized ETL pipelines in Python for large-scale dataset ingestion, validation,
-            and transformation supporting analytics and ML workflows.
+            Conducted deep-dive product analytics including behavioral analysis, model performance
+            evaluation, and feature impact measurement.
           </>,
           <>
-            Developed advanced SQL queries for data aggregation, modeling, and performance
-            benchmarking.
+            Designed controlled experiments (A/B-style testing and pre-post analysis), achieving 57%
+            cost reduction while maintaining performance quality (8/10).
           </>,
           <>
-            Conducted query tuning and optimization to reduce compute cost by 57% while maintaining
-            consistent system performance.
+            Improved classification accuracy by 10% through structured performance benchmarking and
+            regression diagnostics.
           </>,
           <>
-            Designed data validation frameworks to ensure data quality, reliability, and schema
-            consistency across systems.
+            Built SQL-based analytical queries to extract behavioral and product usage data from data
+            warehouse systems.
           </>,
           <>
-            Implemented monitoring and automated failure detection workflows to meet reliability and
-            availability targets.
+            Investigated discrepancies in evaluation metrics and ensured metric integrity and
+            consistency across tracking systems.
           </>,
           <>
-            Collaborated with analysts and product teams to translate business requirements into
-            scalable data solutions.
+            Delivered structured, executive-ready analytical summaries influencing product and model
+            selection decisions.
           </>,
         ],
         images: [],
@@ -178,35 +174,31 @@ const about: About = {
       {
         company: "Chevron",
         timeframe: "September 2022 – January 2025",
-        role: "Process Engineer",
+        role: "Data Analyst",
         achievements: [
           <>
-            Designed and maintained large-scale operational data systems supporting facilities
-            producing ~298,000 barrels/day and ~13 MM m³/day gas throughput.
+            Partnered with operations leadership to define, track, and analyze core KPIs across
+            large-scale energy production systems (~298,000 barrels/day; ~13 MM m³/day gas).
           </>,
           <>
-            Built real-time performance dashboards and reporting pipelines generating $1.2M+ annual
-            value through KPI tracking and energy optimization.
+            Designed and maintained interactive dashboards and automated reports (Excel, SQL-based
+            datasets) that generated $1.2M+ annual value through data-driven performance optimization.
           </>,
           <>
-            Performed large-scale data ingestion and transformation from industrial source systems
-            (relational databases including MySQL/Oracle-style systems).
+            Performed deep-dive analysis, root-cause investigations, and trend analysis to identify
+            operational inefficiencies, contributing to +544 kbbl cumulative production increase.
           </>,
           <>
-            Implemented structured data governance practices including access control, data validation,
-            and standardized schema documentation.
+            Conducted pre-post performance analysis to evaluate process improvements and quantify
+            business impact.
           </>,
           <>
-            Optimized complex queries and performance reporting pipelines to improve latency and
-            reporting reliability.
+            Ensured data integrity through validation checks, structured data cleaning, and
+            standardized reporting processes across large operational datasets.
           </>,
           <>
-            Developed digital twin models (Aspen HYSYS) integrated with operational datasets to
-            improve predictive analytics and troubleshooting cycles.
-          </>,
-          <>
-            Reduced emissions by ~40 tCO₂e/year using data-driven performance monitoring and energy
-            efficiency analytics.
+            Presented executive-ready summaries translating complex analytical findings into clear,
+            actionable business recommendations.
           </>,
         ],
         images: [],
@@ -242,69 +234,61 @@ const about: About = {
     title: "Technical skills",
     skills: [
       {
+        title: "Analytics & Product",
+        description: (
+          <>Funnel analysis, retention analysis, cohort analysis, A/B testing, pre-post analysis, customer journey mapping, attribution modeling</>
+        ),
+        tags: [],
+        images: [],
+      },
+      {
+        title: "SQL & DWH",
+        description: (
+          <>Advanced SQL, BigQuery, data modeling, performance optimization</>
+        ),
+        tags: [
+          { name: "BigQuery", icon: "googlecloud" },
+        ],
+        images: [],
+      },
+      {
+        title: "Tracking & Measurement",
+        description: (
+          <>GA4, Amplitude, GTM (event tracking, validation, schema governance)</>
+        ),
+        tags: [],
+        images: [],
+      },
+      {
+        title: "Dashboarding",
+        description: (
+          <>Looker Studio, Tableau-style executive dashboards</>
+        ),
+        tags: [],
+        images: [],
+      },
+      {
         title: "Programming",
         description: (
-          <>Python (OOP, modular design, logging, error handling), SQL (advanced), JavaScript</>
+          <>Python (analysis, modeling), SQL</>
         ),
         tags: [
           { name: "Python", icon: "python" },
-          { name: "JavaScript", icon: "javascript" },
         ],
         images: [],
       },
       {
-        title: "Cloud & Data Platforms",
+        title: "Experimentation",
         description: (
-          <>Google Cloud Platform (BigQuery, Cloud Storage, Dataform), CI/CD pipelines</>
-        ),
-        tags: [
-          { name: "Google Cloud", icon: "googlecloud" },
-        ],
-        images: [],
-      },
-      {
-        title: "Orchestration & Infrastructure",
-        description: (
-          <>Apache Airflow (DAG design, retries, sensors, monitoring), Docker, Git, containerized workflows</>
-        ),
-        tags: [
-          { name: "Airflow", icon: "airflow" },
-          { name: "Docker", icon: "docker" },
-          { name: "Git", icon: "git" },
-        ],
-        images: [],
-      },
-      {
-        title: "Data Engineering",
-        description: (
-          <>ETL/ELT, batch & streaming pipelines, data modeling, warehousing, partitioning, clustering</>
+          <>Hypothesis testing, regression analysis, statistical diagnostics</>
         ),
         tags: [],
         images: [],
       },
       {
-        title: "Databases",
+        title: "Business Impact",
         description: (
-          <>MySQL, Oracle, BigQuery</>
-        ),
-        tags: [
-          { name: "MySQL", icon: "mysql" },
-          { name: "Oracle", icon: "oracle" },
-        ],
-        images: [],
-      },
-      {
-        title: "Monitoring & Governance",
-        description: (
-          <>SLA management, schema management, data validation, access control</>
-        ),
-        tags: [],
-        images: [],
-      },
-      {
-        title: "Analytics",
-        description: (
-          <>KPI dashboards, performance tuning, query optimization</>
+          <>KPI ownership, executive reporting, metric storytelling</>
         ),
         tags: [],
         images: [],
